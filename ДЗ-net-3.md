@@ -212,5 +212,5 @@ UNCONN                      0                           0                       
 domain - 53 порт udp (DNS)
 
 	5
-	
+
 ![diag](https://user-images.githubusercontent.com/45497624/218222117-57d2af5e-b254-4f57-90f5-6a156e80080a.png)
