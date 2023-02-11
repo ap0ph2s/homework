@@ -1,4 +1,4 @@
-	1 Подключитесь к публичному маршрутизатору в интернет. Найдите маршрут к вашему публичному IP
+> ###	1 Подключитесь к публичному маршрутизатору в интернет. Найдите маршрут к вашему публичному IP
 
 route-views>show ip route 185.34.155.174
 Routing entry for 185.34.154.0/23
@@ -160,7 +160,7 @@ Paths: (20 available, best #19, table default)
       path 7FE09B6C94A8 RPKI State not found
       rx pathid: 0, tx pathid: 0
 	  
-	2 Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.
+> ###	2 Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.
 
 Включить модуль ядра
 $ sudo modprobe dummy
@@ -195,7 +195,7 @@ default via 192.168.20.1 dev eth0 proto static
 192.168.40.0/24 dev ethD proto kernel scope link src 192.168.40.8
 
 
-	3 Проверьте открытые TCP порты в Ubuntu, какие протоколы и приложения используют эти порты? Приведите несколько примеров.
+> ###	3 Проверьте открытые TCP порты в Ubuntu, какие протоколы и приложения используют эти порты? Приведите несколько примеров.
 ~$ ss -ltp
 State                       Recv-Q                      Send-Q                                           Local Address:Port                                              Peer Address:Port                      Process
 LISTEN                      0                           4096                                             127.0.0.53%lo:domain                                                 0.0.0.0:*
@@ -205,12 +205,11 @@ domain - 53 порт tcp (DNS)
 ssh - 22 порт tcp
 
 
-	4 Проверьте используемые UDP сокеты в Ubuntu, какие протоколы и приложения используют эти порты?
+> ###	4 Проверьте используемые UDP сокеты в Ubuntu, какие протоколы и приложения используют эти порты?
 $ ss -lup
 State                       Recv-Q                      Send-Q                                           Local Address:Port                                              Peer Address:Port                      Process
 UNCONN                      0                           0                                                127.0.0.53%lo:domain                                                 0.0.0.0:*
 domain - 53 порт udp (DNS)
 
-	5
-
+> ###	5
 ![diag](https://user-images.githubusercontent.com/45497624/218222117-57d2af5e-b254-4f57-90f5-6a156e80080a.png)
