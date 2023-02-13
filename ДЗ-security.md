@@ -1,5 +1,7 @@
 ### 1 Установите Bitwarden плагин для браузера. Зарегестрируйтесь и сохраните несколько паролей.
 
+![Screenshot 3](https://user-images.githubusercontent.com/45497624/218489940-810b2d4d-8aac-46ab-a9d1-37edd60cc0e6.png)
+
 ### 2 Установите Google authenticator на мобильный телефон. Настройте вход в Bitwarden акаунт через Google authenticator OTP.
 
 ### 3 Установите apache2, сгенерируйте самоподписанный сертификат, настройте тестовый сайт для работы по HTTPS.
