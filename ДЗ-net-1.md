@@ -42,13 +42,14 @@ Set-Cookie: prov=ae68e3a8-87ac-4fe3-4e0d-a2ae9e50bc63; domain=.stackoverflow.com
 Из всех процессов дольше всего было ожидание ответа сервера и начальная загрузка контента.
 
 ### 3 Какой IP адрес у вас в интернете?
-```dig +short myip.opendns.com @resolver1.opendns.com```
+```dig +short myip.opendns.com @resolver1.opendns.com```  
 ```185.34.155.174```
 
 ### 4 Какому провайдеру принадлежит ваш IP адрес? Какой автономной системе AS? Воспользуйтесь утилитой ```whois```
 ```$ whois 185.34.155.174 | grep -E 'mnt-by|origin'```  
 ```mnt-by:         YARNET-MNT
-origin:         AS60172```
+origin:         AS60172
+```
 
 ### 5 Через какие сети проходит пакет, отправленный с вашего компьютера на адрес 8.8.8.8? Через какие AS? Воспользуйтесь утилитой ```traceroute```
 $ traceroute -An 8.8.8.8
