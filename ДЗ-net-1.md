@@ -38,9 +38,10 @@ Set-Cookie: prov=ae68e3a8-87ac-4fe3-4e0d-a2ae9e50bc63; domain=.stackoverflow.com
 * проверьте время загрузки страницы, какой запрос обрабатывался дольше всего?
 * приложите скриншот консоли браузера в ответ.
 
-Первый ответ от сервера при открытии сайти - код 307 (Temporary Redirect)  
-![Screenshot 1](https://user-images.githubusercontent.com/45497624/218461608-bd2a5b9d-3fa9-4ec3-9764-161a2f18e68b.png)
+Первый ответ от сервера при открытии сайти - код 307 (Temporary Redirect) «временное перенаправление»
+![Screenshot 1](https://user-images.githubusercontent.com/45497624/218485637-30678c45-b128-4065-bb23-5107b0bde23e.png)  
 Из всех процессов дольше всего было ожидание ответа сервера и начальная загрузка контента.
+![Screenshot 2](https://user-images.githubusercontent.com/45497624/218485682-56aed66f-6809-4c03-ab25-6e8895f99e4b.png)  
 
 ### 3 Какой IP адрес у вас в интернете?
 ```dig +short myip.opendns.com @resolver1.opendns.com```  
