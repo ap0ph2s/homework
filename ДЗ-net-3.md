@@ -213,3 +213,5 @@ domain - 53 порт udp (DNS)
   
 ###	5 Используя diagrams.net, создайте L3 диаграмму вашей домашней сети или любой другой сети, с которой вы работали.  
 ![diag](https://user-images.githubusercontent.com/45497624/218222117-57d2af5e-b254-4f57-90f5-6a156e80080a.png)  
+
+![diag](https://user-images.githubusercontent.com/45497624/218411705-f54409e3-b94c-4587-9435-6d32645c87ea.png)
