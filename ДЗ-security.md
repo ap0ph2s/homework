@@ -7,6 +7,15 @@
 ![Screenshot 5](https://user-images.githubusercontent.com/45497624/218491949-adca0eac-5821-44e0-92ea-cdad5e200a2f.png)
 
 ### 3 Установите apache2, сгенерируйте самоподписанный сертификат, настройте тестовый сайт для работы по HTTPS.
+  
+```sudo apt install apache2```
+```sudo apt list --installed | grep 'apache2'```
+```
+apache2-bin/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed,automatic]
+apache2-data/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 all [installed,automatic]
+apache2-utils/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed,automatic]
+apache2/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed]
+```
 
 ### 4 Проверьте на TLS уязвимости произвольный сайт в интернете (кроме сайтов МВД, ФСБ, МинОбр, НацБанк, РосКосмос, РосАтом, РосНАНО и любых госкомпаний, объектов КИИ, ВПК ... и тому подобное).
 
