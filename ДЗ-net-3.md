@@ -1,6 +1,6 @@
 ###	1 Подключитесь к публичному маршрутизатору в интернет. Найдите маршрут к вашему публичному IP
 
-route-views>show ip route 185.34.155.174
+\route-views>show ip route 185.34.155.174
 Routing entry for 185.34.154.0/23
   Known via "bgp 6447", distance 20, metric 0
   Tag 3303, type external
