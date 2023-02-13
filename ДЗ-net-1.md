@@ -1,4 +1,4 @@
-1
+### 1 Работа c HTTP через телнет
 $ curl -I stackoverflow.com:80
 HTTP/1.1 301 Moved Permanently
 Connection: keep-alive
@@ -20,20 +20,27 @@ X-DNS-Prefetch-Control: off
 Set-Cookie: prov=ae68e3a8-87ac-4fe3-4e0d-a2ae9e50bc63; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly
 Перенапраление со страницы HTTP на HTTPS - код 301
 
-2
-Первый ответ от сервера при открытии сайти - код 307 (Temporary Redirect)
+### 2 Повторите задание 1 в браузере, используя консоль разработчика F12.
+* откройте вкладку Network
+* отправьте запрос http://stackoverflow.com
+* найдите первый ответ HTTP сервера, откройте вкладку Headers
+* укажите в ответе полученный HTTP код
+* проверьте время загрузки страницы, какой запрос обрабатывался дольше всего?
+* приложите скриншот консоли браузера в ответ.
+
+Первый ответ от сервера при открытии сайти - код 307 (Temporary Redirect)  
 Из всех процессов дольше всего было ожидание ответа сервера и начальная загрузка контента.
 
-3
-dig +short myip.opendns.com @resolver1.opendns.com
-185.34.155.174
+### 3 Какой IP адрес у вас в интернете?
+```dig +short myip.opendns.com @resolver1.opendns.com```
+```185.34.155.174```
 
-4
-$ whois 185.34.155.174 | grep -E 'mnt-by|origin'
-mnt-by:         YARNET-MNT
-origin:         AS60172
+### 4 Какому провайдеру принадлежит ваш IP адрес? Какой автономной системе AS? Воспользуйтесь утилитой ```whois```
+```$ whois 185.34.155.174 | grep -E 'mnt-by|origin'```  
+```mnt-by:         YARNET-MNT
+origin:         AS60172```
 
-5
+### 5 Через какие сети проходит пакет, отправленный с вашего компьютера на адрес 8.8.8.8? Через какие AS? Воспользуйтесь утилитой ```traceroute```
 $ traceroute -An 8.8.8.8
 traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
  1  192.168.25.1 [*]  7.578 ms  7.513 ms  7.497 ms
@@ -57,10 +64,10 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
 19  * * *
 20  * * 8.8.8.8 [AS15169/AS263411]  32.471 ms
 
-6
+### 6
 mtr 8.8.8.8 -znrc 1
 
-7
+### 7
 $ dig +short NS dns.google
 ns3.zdns.google.
 ns2.zdns.google.
@@ -70,7 +77,7 @@ $ dig +short A dns.google
 8.8.8.8
 8.8.4.4
 
-8
+### 8
 $ dig -x 8.8.4.4  +noall +answer
 4.4.8.8.in-addr.arpa.	86399	IN	PTR	dns.google.
 $ dig -x 8.8.8.8  +noall +answer
