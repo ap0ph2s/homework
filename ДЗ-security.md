@@ -8,7 +8,7 @@
 
 ### 3 Установите apache2, сгенерируйте самоподписанный сертификат, настройте тестовый сайт для работы по HTTPS.
   
-```sudo apt install apache2```
+```sudo apt install apache2```  
 ```sudo apt list --installed | grep 'apache2'```
 ```
 apache2-bin/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed,automatic]
