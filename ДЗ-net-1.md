@@ -99,9 +99,9 @@ $ dig +short A dns.google
 ### 8 Проверьте PTR записи для IP адресов из задания 7. Какое доменное имя привязано к IP? Воспользуйтесь утилитой ```dig```  
 
 
-```$ dig -x 8.8.4.4  +noall +answer```
-```4.4.8.8.in-addr.arpa.	86399	IN	PTR	dns.google.```
-```$ dig -x 8.8.8.8  +noall +answer```
+```$ dig -x 8.8.4.4  +noall +answer```   
+```4.4.8.8.in-addr.arpa.	86399	IN	PTR	dns.google.```  
+```$ dig -x 8.8.8.8  +noall +answer```  
 ```8.8.8.8.in-addr.arpa.	36156	IN	PTR	dns.google.```
 
 
