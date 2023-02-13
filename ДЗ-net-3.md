@@ -201,7 +201,8 @@ network:
 ```State                       Recv-Q                      Send-Q                                           Local Address:Port                                              Peer Address:Port                      Process  
 LISTEN                      0                           4096                                             127.0.0.53%lo:domain                                                 0.0.0.0:*  
 LISTEN                      0                           128                                                    0.0.0.0:ssh                                                    0.0.0.0:*  
-LISTEN                      0                           128                                                       [::]:ssh                                                       [::]:*```  
+LISTEN                      0                           128                                                       [::]:ssh                                                       [::]:*  
+```
 domain - 53 порт tcp (DNS)  
 ssh - 22 порт tcp  
   
@@ -209,7 +210,8 @@ ssh - 22 порт tcp
 ###	4 Проверьте используемые UDP сокеты в Ubuntu, какие протоколы и приложения используют эти порты?  
 ```$ ss -lup```  
 ```State                       Recv-Q                      Send-Q                                           Local Address:Port                                              Peer Address:Port                      Process  
-UNCONN                      0                           0                                                127.0.0.53%lo:domain                                                 0.0.0.0:*```  
+UNCONN                      0                           0                                                127.0.0.53%lo:domain                                                 0.0.0.0:*  
+```
 domain - 53 порт udp (DNS)  
   
 ###	5 Используя diagrams.net, создайте L3 диаграмму вашей домашней сети или любой другой сети, с которой вы работали.  
