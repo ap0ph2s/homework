@@ -1,6 +1,6 @@
 ### 1 Работа c HTTP через телнет
-$ curl -I stackoverflow.com:80
-HTTP/1.1 301 Moved Permanently
+```$ curl -I stackoverflow.com:80```
+```HTTP/1.1 301 Moved Permanently
 Connection: keep-alive
 cache-control: no-cache, no-store, must-revalidate
 location: https://stackoverflow.com/
@@ -19,7 +19,7 @@ Vary: Fastly-SSL
 X-DNS-Prefetch-Control: off
 Set-Cookie: prov=ae68e3a8-87ac-4fe3-4e0d-a2ae9e50bc63; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly
 Перенапраление со страницы HTTP на HTTPS - код 301
-
+```
 ### 2 Повторите задание 1 в браузере, используя консоль разработчика F12.
 * откройте вкладку Network
 * отправьте запрос http://stackoverflow.com
