@@ -10,7 +10,8 @@ HOST: stackoverflow.com
 
 
 ```$ curl -I stackoverflow.com:80```
-```HTTP/1.1 301 Moved Permanently
+```
+HTTP/1.1 301 Moved Permanently
 Connection: keep-alive
 cache-control: no-cache, no-store, must-revalidate
 location: https://stackoverflow.com/
