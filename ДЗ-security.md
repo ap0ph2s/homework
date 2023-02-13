@@ -16,6 +16,8 @@ apache2-data/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 all [installed,a
 apache2-utils/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed,automatic]
 apache2/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed]
 ```
+```sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt```
+Самоподписанный сертификат без защиты сертификата с помощью пароля, на 10 лет, сгенерировать одновременно новый сертификат и новый ключ RSA длиной 2048 бит и указываем где разместить создаваемый закрытый ключ и сертификат
 
 ### 4 Проверьте на TLS уязвимости произвольный сайт в интернете (кроме сайтов МВД, ФСБ, МинОбр, НацБанк, РосКосмос, РосАтом, РосНАНО и любых госкомпаний, объектов КИИ, ВПК ... и тому подобное).
 
