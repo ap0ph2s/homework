@@ -95,6 +95,7 @@ ns3.zdns.google.
 ns2.zdns.google.
 ns4.zdns.google.
 ns1.zdns.google.
+```
 ```$ dig +short A dns.google```
 ```
 8.8.8.8
