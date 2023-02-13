@@ -72,7 +72,7 @@ Paths: (20 available, best #19, table default)
     91.218.184.60 from 91.218.184.60 (91.218.184.60)  
       Origin IGP, localpref 100, valid, external  
       Community: 12552:12000 12552:12100 12552:12101 12552:22000  
-      Extended Community: 0x43:100:1  
+      Extended Community: 0x43\:100:1  
       path 7FE14394C010 RPKI State not found  
       rx pathid: 0, tx pathid: 0  
   Refresh Epoch 1  
