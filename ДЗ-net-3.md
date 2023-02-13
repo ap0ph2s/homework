@@ -163,9 +163,9 @@ Paths: (20 available, best #19, table default)
 ###	2 Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.  
   
 Включить модуль ядра  
-$ sudo modprobe dummy  
+```$ sudo modprobe dummy```  
 Создать новый виртуальный интерфейс  
-$ sudo ip link add eth0 type dummy  
+```$ sudo ip link add eth0 type dummy```  
   
 $ cat /etc/netplan/00-installer-config.yaml  
 \# This is the network config written by 'subiquity'  
