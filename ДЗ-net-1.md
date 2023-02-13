@@ -4,7 +4,8 @@
 ```GET /questions HTTP/1.0
 HOST: stackoverflow.com
 [press enter]
-[press enter]```  
+[press enter]
+```
 В ответе укажите полученный HTTP код, что он означает?  
 
 
