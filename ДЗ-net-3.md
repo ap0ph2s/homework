@@ -1,5 +1,5 @@
 ###	1 Подключитесь к публичному маршрутизатору в интернет. Найдите маршрут к вашему публичному IP    
-    
+```    
 route-views>show ip route 185.34.155.174    
 Routing entry for 185.34.154.0/23    
   Known via "bgp 6447", distance 20, metric 0    
@@ -159,7 +159,7 @@ Paths: (20 available, best #19, table default)
       Origin IGP, localpref 100, valid, external  
       path 7FE09B6C94A8 RPKI State not found  
       rx pathid: 0, tx pathid: 0  
-	    
+```	    
 ###	2 Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.  
   
 Включить модуль ядра  
