@@ -150,10 +150,10 @@ network:
 ### 7 Как проверить ARP таблицу в Linux, Windows? Как очистить ARP кеш полностью? Как из ARP таблицы удалить только один нужный IP?
 /# ARP таблица  
 ```ip neighbour```  
-```arp -a```
+```arp -a```  
 /# очистить всю ARP таблицу  
 ```ip neigh flush all```  
-```arp -d *```
+```arp -d *```  
 /# очистить один адрес в ARP таблице  
 ```ip neigh delete 192.168.25.2 dev dev wlp1s0```  
 ```arp /d 192.168.20.208```
