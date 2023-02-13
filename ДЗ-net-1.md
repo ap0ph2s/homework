@@ -52,8 +52,10 @@ mnt-by:         YARNET-MNT
 origin:         AS60172
 ```
 
-### 5 Через какие сети проходит пакет, отправленный с вашего компьютера на адрес 8.8.8.8? Через какие AS? Воспользуйтесь утилитой ```traceroute```
-$ traceroute -An 8.8.8.8
+### 5 Через какие сети проходит пакет, отправленный с вашего компьютера на адрес 8.8.8.8? Через какие AS? Воспользуйтесь утилитой ```traceroute```  
+
+```$ traceroute -An 8.8.8.8```  
+```
 traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
  1  192.168.25.1 [*]  7.578 ms  7.513 ms  7.497 ms
  2  192.168.20.254 [*]  5.775 ms  7.448 ms  7.435 ms
@@ -75,12 +77,15 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
 18  * * *
 19  * * *
 20  * * 8.8.8.8 [AS15169/AS263411]  32.471 ms
+```
 
-### 6
-mtr 8.8.8.8 -znrc 1
+### 6 Повторите задание 5 в утилите ```mtr```. На каком участке наибольшая задержка - delay?  
 
-### 7
-$ dig +short NS dns.google
+```mtr 8.8.8.8 -znrc 1```
+
+### 7 Какие DNS сервера отвечают за доменное имя dns.google? Какие A записи? Воспользуйтесь утилитой ``dig```  
+```$ dig +short NS dns.google```
+```
 ns3.zdns.google.
 ns2.zdns.google.
 ns4.zdns.google.
@@ -88,11 +93,14 @@ ns1.zdns.google.
 $ dig +short A dns.google
 8.8.8.8
 8.8.4.4
+```
 
-### 8
-$ dig -x 8.8.4.4  +noall +answer
-4.4.8.8.in-addr.arpa.	86399	IN	PTR	dns.google.
-$ dig -x 8.8.8.8  +noall +answer
-8.8.8.8.in-addr.arpa.	36156	IN	PTR	dns.google.
+### 8 Проверьте PTR записи для IP адресов из задания 7. Какое доменное имя привязано к IP? Воспользуйтесь утилитой ```dig```  
+
+
+```$ dig -x 8.8.4.4  +noall +answer```
+```4.4.8.8.in-addr.arpa.	86399	IN	PTR	dns.google.```
+```$ dig -x 8.8.8.8  +noall +answer```
+```8.8.8.8.in-addr.arpa.	36156	IN	PTR	dns.google.```
 
 
