@@ -193,8 +193,8 @@ network:
 ```default via 192.168.20.1 dev eth0 proto static  
 8.8.8.8 via 192.168.20.254 dev eth0 proto static  
 192.168.20.0/24 dev eth0 proto kernel scope link src 192.168.20.8  
-192.168.40.0/24 dev ethD proto kernel scope link src 192.168.40.8```  
-  
+192.168.40.0/24 dev ethD proto kernel scope link src 192.168.40.8  
+```  
   
 ###	3 Проверьте открытые TCP порты в Ubuntu, какие протоколы и приложения используют эти порты? Приведите несколько примеров.  
 ```~$ ss -ltp```  
