@@ -47,7 +47,8 @@ Set-Cookie: prov=ae68e3a8-87ac-4fe3-4e0d-a2ae9e50bc63; domain=.stackoverflow.com
 
 ### 4 Какому провайдеру принадлежит ваш IP адрес? Какой автономной системе AS? Воспользуйтесь утилитой ```whois```
 ```$ whois 185.34.155.174 | grep -E 'mnt-by|origin'```  
-```mnt-by:         YARNET-MNT
+```
+mnt-by:         YARNET-MNT
 origin:         AS60172
 ```
 
