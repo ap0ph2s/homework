@@ -167,9 +167,9 @@ Paths: (20 available, best #19, table default)
 Создать новый виртуальный интерфейс  
 ```$ sudo ip link add eth0 type dummy```  
   
-$ cat /etc/netplan/00-installer-config.yaml  
+```$ cat /etc/netplan/00-installer-config.yaml```  
 \# This is the network config written by 'subiquity'  
-network:  
+```network:  
   ethernets:  
     eth0:  
       addresses:  
@@ -186,29 +186,29 @@ network:
     ethD:  
       addresses:  
       - 192.168.40.8/24  
-  version: 2  
+  version: 2```  
   
-$ ip route  
-default via 192.168.20.1 dev eth0 proto static  
+```$ ip route```  
+```default via 192.168.20.1 dev eth0 proto static  
 8.8.8.8 via 192.168.20.254 dev eth0 proto static  
 192.168.20.0/24 dev eth0 proto kernel scope link src 192.168.20.8  
-192.168.40.0/24 dev ethD proto kernel scope link src 192.168.40.8  
+192.168.40.0/24 dev ethD proto kernel scope link src 192.168.40.8```  
   
   
 ###	3 Проверьте открытые TCP порты в Ubuntu, какие протоколы и приложения используют эти порты? Приведите несколько примеров.  
-~$ ss -ltp  
-State                       Recv-Q                      Send-Q                                           Local Address:Port                                              Peer Address:Port                      Process  
+```~$ ss -ltp```  
+```State                       Recv-Q                      Send-Q                                           Local Address:Port                                              Peer Address:Port                      Process  
 LISTEN                      0                           4096                                             127.0.0.53%lo:domain                                                 0.0.0.0:*  
 LISTEN                      0                           128                                                    0.0.0.0:ssh                                                    0.0.0.0:*  
-LISTEN                      0                           128                                                       [::]:ssh                                                       [::]:*  
+LISTEN                      0                           128                                                       [::]:ssh                                                       [::]:*```  
 domain - 53 порт tcp (DNS)  
 ssh - 22 порт tcp  
   
   
 ###	4 Проверьте используемые UDP сокеты в Ubuntu, какие протоколы и приложения используют эти порты?  
-$ ss -lup  
-State                       Recv-Q                      Send-Q                                           Local Address:Port                                              Peer Address:Port                      Process  
-UNCONN                      0                           0                                                127.0.0.53%lo:domain                                                 0.0.0.0:*  
+```$ ss -lup```  
+```State                       Recv-Q                      Send-Q                                           Local Address:Port                                              Peer Address:Port                      Process  
+UNCONN                      0                           0                                                127.0.0.53%lo:domain                                                 0.0.0.0:*```  
 domain - 53 порт udp (DNS)  
   
 ###	5 Используя diagrams.net, создайте L3 диаграмму вашей домашней сети или любой другой сети, с которой вы работали.  
