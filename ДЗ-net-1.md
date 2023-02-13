@@ -1,4 +1,13 @@
 ### 1 Работа c HTTP через телнет
+* Подключитесь утилитой телнет к сайту stackoverflow.com ```telnet stackoverflow.com 80```
+* Отправьте HTTP запрос
+```GET /questions HTTP/1.0
+HOST: stackoverflow.com
+[press enter]
+[press enter]```  
+В ответе укажите полученный HTTP код, что он означает?  
+
+
 ```$ curl -I stackoverflow.com:80```
 ```HTTP/1.1 301 Moved Permanently
 Connection: keep-alive
