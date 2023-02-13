@@ -168,7 +168,8 @@ Paths: (20 available, best #19, table default)
 ```$ sudo ip link add eth0 type dummy```  
   
 ```$ cat /etc/netplan/00-installer-config.yaml```  
-```# This is the network config written by 'subiquity'  
+```
+# This is the network config written by 'subiquity'  
 network:  
   ethernets:  
     eth0:  
