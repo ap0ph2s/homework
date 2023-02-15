@@ -288,3 +288,11 @@ Host test-server2
 ```
 
 ### 7 Соберите дамп трафика утилитой tcpdump в формате pcap, 100 пакетов. Откройте файл pcap в Wireshark.
+
+```sudo tcpdump host 192.168.20.8 -c 100 -w 20-8.pcap```
+```
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+100 packets captured
+100 packets received by filter
+0 packets dropped by kernel
+```
