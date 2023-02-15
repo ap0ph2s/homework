@@ -269,7 +269,7 @@ PasswordAuthentication no
 ```
 Host test-server2
  HostName 192.168.20.9
- User tartyshev
+ User toor
  #Port 22
  IdentityFile ~/.ssh/id_rsa_
  Protocol 2
