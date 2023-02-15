@@ -60,9 +60,9 @@ Syntax OK
 
 ### 4 Проверьте на TLS уязвимости произвольный сайт в интернете (кроме сайтов МВД, ФСБ, МинОбр, НацБанк, РосКосмос, РосАтом, РосНАНО и любых госкомпаний, объектов КИИ, ВПК ... и тому подобное).
 
-Клонировать репозиторий git
-```git clone --depth 1 https://github.com/drwetter/testssl.sh.git```
-```cd testssl.sh```
+Клонировать репозиторий git  
+```git clone --depth 1 https://github.com/drwetter/testssl.sh.git```  
+```cd testssl.sh```  
 Запустить параллельное сканирование на уясвимости сайта https://ya.ru/ ```./testssl.sh -U --sneaky --parallel https://ya.ru/```
 ```
 ###########################################################
@@ -209,8 +209,58 @@ TLSv1.3 (server order -- server prioritizes ChaCha ciphers when preferred by cli
  Done 2023-02-15 13:45:01 [  45s] -->> 5.255.255.242:443 (ya.ru) <<--
 ```
 
-
 ### 5 Установите на Ubuntu ssh сервер, сгенерируйте новый приватный ключ. Скопируйте свой публичный ключ на другой сервер. Подключитесь к серверу по SSH-ключу.
+
+Генерация ключа SSH d ~>/.ssh/: id_rsa - приватный ключ, id_rsa.pub - публичный ключ
+```ssh-keygen```
+Скопировать публичный ключ на удаленный сервер и подключится по ключу ssh
+```ssh-copy-id toor@192.168.20.9```
+```ssh toor@192.168.20.9```
+```
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-37-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Feb 15 03:33:21 PM MSK 2023
+
+  System load:  0.0               Processes:             120
+  Usage of /:   9.7% of 60.70GB   Users logged in:       1
+  Memory usage: 54%               IPv4 address for eth0: 192.168.20.9
+  Swap usage:   2%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+1 device has a firmware upgrade available.
+Run `fwupdmgr get-upgrades` for more information.
+
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+6 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+*** System restart required ***
+
+1 device has a firmware upgrade available.
+Run `fwupdmgr get-upgrades` for more information.
+
+Last login: Wed Feb 15 15:19:30 2023 from 192.168.20.8
+```
+Можно отключить аутентификацию по паролю SSH ```sudo nano/etc/ssh/sshd_config```
+```
+PasswordAuthentication no
+```
+
 
 ### 6 Переименуйте файлы ключей из задания 5. Настройте файл конфигурации SSH клиента, так чтобы вход на удаленный сервер осуществлялся по имени сервера.
 
