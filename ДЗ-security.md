@@ -21,7 +21,7 @@ apache2/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed]
 ```
 Создать самоподписанный сертификат без защиты паролем, на 2,8 года, сгенерировать одновременно новый сертификат и новый ключ RSA длиной 2048 бит, указать где разместить создаваемый закрытый ключ и сам сертификат, указать информацию CSR в ключе
 ```sudo openssl req -x509 -nodes -days 1024 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt -subj "/C=RU/ST=KLG/L=Kaluga/O=KVT/OU=OIT/CN=UG-SRV-UbintuSRV1.lan.kvt.su"```  
-Создать конфигурационный файл ```sudo nano /etc/apache2/sites-available/UG-SRV-UbintuSRV1.lan.kvt.su.conf```  
+Создать конфигурационный файл ```sudo nano /etc/apache2/sites-available/UG-SRV-UbintuSRV1.lan.kvt.su.conf``` с помощью ```moz://a SSL Configuration Generator```  
 ```
 <VirtualHost *:443>
    ServerName UG-SRV-UbintuSRV1.lan.kvt.su
