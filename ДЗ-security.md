@@ -30,7 +30,19 @@ apache2/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed]
    SSLEngine on
    SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
    SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+    
+   # enable HTTP/2, if available
+   Protocols h2 http/1.1
 </VirtualHost>
+
+# intermediate configuration
+SSLProtocol             all -SSLv3 -TLSv1 -TLSv1.1
+SSLCipherSuite          ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384
+SSLHonorCipherOrder     off
+SSLSessionTickets       off
+
+SSLUseStapling On
+SSLStaplingCache "shmcb:logs/ssl_stapling(32768)"
 ```
 Создать тестовую HTML страницу  
 ```sudo mkdir /var/www/UG-SRV-UbintuSRV1.lan.kvt.su```  
