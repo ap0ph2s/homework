@@ -264,4 +264,26 @@ PasswordAuthentication no
 
 ### 6 Переименуйте файлы ключей из задания 5. Настройте файл конфигурации SSH клиента, так чтобы вход на удаленный сервер осуществлялся по имени сервера.
 
+Переименовать id_rsa в id_rsa_ ```mv ~/.ssh/id_rsa ~/.ssh/id_rsa_```
+Создать файл конфигурации ```nano ~/.ssh/config```
+```
+Host test-server2
+ HostName 192.168.20.9
+ User tartyshev
+ #Port 22
+ IdentityFile ~/.ssh/id_rsa_
+ Protocol 2
+ ```
+ Подключится на сервер по имени ``` ssh test-server2```
+ ```
+ Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-37-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Feb 15 04:03:56 PM MSK 2023
+*     *     *
+```
+
 ### 7 Соберите дамп трафика утилитой tcpdump в формате pcap, 100 пакетов. Откройте файл pcap в Wireshark.
