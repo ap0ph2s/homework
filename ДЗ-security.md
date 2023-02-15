@@ -42,7 +42,8 @@ apache2/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed]
 ```
 Syntax OK
 ```
-```sudo systemctl restart apache2```
+```sudo systemctl restart apache2```  
+![Screenshot 6](https://user-images.githubusercontent.com/45497624/218987619-1df69fa0-e814-4a28-b114-0bb19c15b94a.png)
 
 
 ### 4 Проверьте на TLS уязвимости произвольный сайт в интернете (кроме сайтов МВД, ФСБ, МинОбр, НацБанк, РосКосмос, РосАтом, РосНАНО и любых госкомпаний, объектов КИИ, ВПК ... и тому подобное).
