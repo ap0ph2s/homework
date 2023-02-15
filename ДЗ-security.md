@@ -30,7 +30,10 @@ apache2/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed]
 </VirtualHost>
 ```
 ```sudo mkdir /var/www/UG-SRV-UbintuSRV1.lan.kvt.su```  
-```sudo nano /var/www/UG-SRV-UbintuSRV1.lan.kvt.su/index.html``` --> ```<h1>it worked!</h1>```
+```sudo nano /var/www/UG-SRV-UbintuSRV1.lan.kvt.su/index.html```
+```
+<h1>it worked!</h1>
+```
 
 
 ### 4 Проверьте на TLS уязвимости произвольный сайт в интернете (кроме сайтов МВД, ФСБ, МинОбр, НацБанк, РосКосмос, РосАтом, РосНАНО и любых госкомпаний, объектов КИИ, ВПК ... и тому подобное).
