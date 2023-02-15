@@ -32,6 +32,7 @@ apache2/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed]
    SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
 </VirtualHost>
 ```
+Создать тестовую HTML страницу  
 ```sudo mkdir /var/www/UG-SRV-UbintuSRV1.lan.kvt.su```  
 ```sudo nano /var/www/UG-SRV-UbintuSRV1.lan.kvt.su/index.html```
 ```
