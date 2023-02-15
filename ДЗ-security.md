@@ -283,6 +283,7 @@ Host test-server2
  * Support:        https://ubuntu.com/advantage
 
   System information as of Wed Feb 15 04:03:56 PM MSK 2023
+  
 *     *     *
 ```
 
