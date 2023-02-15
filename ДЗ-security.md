@@ -10,8 +10,8 @@
   
 Установить ```apache2``` и включить ```mod_ssl``` для поддержка ssl-шифрования  
 ```sudo apt install apache2```  
-```sudo a2enmod ssl```
-```sudo systemctl restart apache2```
+```sudo a2enmod ssl```  
+```sudo systemctl restart apache2```  
 ```sudo apt list --installed | grep 'apache2'```
 ```
 apache2-bin/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed,automatic]
