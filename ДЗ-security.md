@@ -39,6 +39,10 @@ apache2/jammy-updates,jammy-security,now 2.4.52-1ubuntu4.3 amd64 [installed]
 <h1>it worked!</h1>
 ```
 Активировать конфигурационный файл ```sudo a2ensite UG-SRV-UbintuSRV1.lan.kvt.su.conf```, ```sudo systemctl reload apache2``` и проверить на наличие ошибок ```sudo apache2ctl configtest```
+```
+Syntax OK
+```
+```sudo systemctl restart apache2```
 
 
 ### 4 Проверьте на TLS уязвимости произвольный сайт в интернете (кроме сайтов МВД, ФСБ, МинОбр, НацБанк, РосКосмос, РосАтом, РосНАНО и любых госкомпаний, объектов КИИ, ВПК ... и тому подобное).
