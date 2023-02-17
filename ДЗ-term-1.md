@@ -127,12 +127,15 @@ RAM: 1024Mb, CPU: 2, vHDD: 64Gb video: 4Мb
 2059:              Perform filename completion and insert the list of possible completions enclosed within braces so the list is available to the shell (see Brace Expansion above).
 ```
 
----
+---  
+
 ### 7 С учётом ответа на предыдущий вопрос, как создать однократным вызовом ```touch``` 100000 файлов? Получится ли аналогичным образом создать 300000? Если нет, то почему?  
 ---  
+
 100000 файлов одной командой создать можно, ```touch file{1..100000}```
 Верхний предел количества аргумента в команде ```getconf ARG_MAX``` - 2097152
----
+
+---  
 ### 8 В man bash поищите по ```/\[\[```. Что делает конструкция ```[[ -d /tmp ]]```
 ---
 ```[[ -d /tmp ]]``` проверяет, что ```/tmp``` существует и является каталогом
