@@ -16,7 +16,9 @@
 ```sudo mkdir -p /etc/vagrant```  
 ```cd /etc/vagrant```  
 ```vagrant init```  
-```
+```cp Vagrantfile Vagrantfile_```  
+```sudo nano Vagrantfile```  
+
 
 
 
