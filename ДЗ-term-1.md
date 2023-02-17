@@ -80,11 +80,27 @@ RAM: 1024Mb, CPU: 2, vHDD: 64Gb video: 4Мb
 
 ---
 ### 4 Команда ```vagrant ssh``` из директории, в которой содержится Vagrantfile, позволит вам оказаться внутри виртуальной машины без каких-либо дополнительных настроек. Попрактикуйтесь в выполнении обсуждаемых команд в терминале Ubuntu.
-
+---
+Попрактиковался
+---
 ### 5 Ознакомьтесь с разделами ```man bash```, почитайте о настройках самого bash:
-
 * какой переменной можно задать длину журнала ```history```, и на какой строчке manual это описывается?
 * что делает директива ```ignoreboth``` в bash?
+---
+*
+```
+655        HISTFILE
+656               The  name  of  the  file  in which command history is saved (see HISTORY below).  The default value is ~/.bash_history.  If unset, the command history is not saved when a
+657               shell exits.
+658        HISTFILESIZE
+659               The maximum number of lines contained in the history file.  When this variable is assigned a value, the history file is truncated, if necessary, to contain no  more  t    659 han
+```
+*
+```
+ HISTCONTROL
+              A colon-separated list of values controlling how commands are saved on the history list.  If the list of values includes ignorespace, lines which begin with a space char acter  are not saved in the history list.  A value of ignoredups causes lines matching the previous history entry to not be saved.  A value of ignoreboth is shorthand for ignorespace and ignoredups.  A value of erasedups causes all previous lines matching the current line to be removed from the history list before that line is saved. Any value  not  in  the  above list is ignored.  If HISTCONTROL is unset, or does not include a valid value, all lines read by the shell parser are saved on the history list, subject to the value of HISTIGNORE.  The second and subsequent lines of a multi-line compound command are not tested, and are added to the history regardless of the value of HISTCONTROL.
+```
+---
 ### 6 В каких сценариях использования применимы скобки ```{}``` и на какой строчке ```man bash``` это описано?
 
 ### 7 С учётом ответа на предыдущий вопрос, как создать однократным вызовом ```touch``` 100000 файлов? Получится ли аналогичным образом создать 300000? Если нет, то почему?
