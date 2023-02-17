@@ -22,8 +22,9 @@
  Vagrant.configure("2") do |config|
  	config.vm.box = "bento/ubuntu-20.04"
  end
- ```vagrant up```
- ```
+```
+```vagrant up```
+```
 Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Importing base box 'bento/ubuntu-20.04'...
 ==> default: Matching MAC address for NAT networking...
@@ -53,7 +54,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Checking for guest additions in VM...
 ==> default: Mounting shared folders...
     default: /vagrant => /etc/vagrant/
- ```
+```
 
 
 
