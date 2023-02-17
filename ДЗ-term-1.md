@@ -70,11 +70,14 @@ RAM: 1024Mb, CPU: 2, vHDD: 64Gb video: 4Мb
 ```
  Vagrant.configure("2") do |config|
  	config.vm.box = "bento/ubuntu-20.04"
-	v.memory = 1025
-	v.cpus = 3
+	config.vm.provider "virtualbox" do |v|
+		v.memory=1025
+		v.cpus=3
+	end
  end
 ```
-```vagrant up```
+```vagrant up```  
+
 ---
 ### 4 Команда ```vagrant ssh``` из директории, в которой содержится Vagrantfile, позволит вам оказаться внутри виртуальной машины без каких-либо дополнительных настроек. Попрактикуйтесь в выполнении обсуждаемых команд в терминале Ubuntu.
 
