@@ -109,11 +109,34 @@ RAM: 1024Mb, CPU: 2, vHDD: 64Gb video: 4Мb
 ```
 ---
 ### 6 В каких сценариях использования применимы скобки ```{}``` и на какой строчке ```man bash``` это описано?
+---
+```{}``` использовать, когда в аргумент функции удобно описать массивом, например ```mkdir dir_{1..10}```
+```
+764:   Brace Expansion
+765-       Brace expansion is a mechanism by which arbitrary strings may be generated.  This mechanism is similar to pathname expansion, but the filenames generated need not exist.  Patterns to be brace expanded take the form of an op‐
+766-       tional  preamble,  followed  by  either a series of comma-separated strings or a sequence expression between a pair of braces, followed by an optional postscript.  The preamble is prefixed to each string contained within the
+767-       braces, and the postscript is then appended to each resulting string, expanding left to right.
+768-
+769-       Brace expansions may be nested.  The results of each expanded string are not sorted; left to right order is preserved.  For example, a{d,c,b}e expands into `ade ace abe'.
+770-
+771-       A sequence expression takes the form {x..y[..incr]}, where x and y are either integers or single characters, and incr, an optional increment, is an integer.  When integers are supplied, the expression expands to each  number
+772-       between  x  and  y,  inclusive.  Supplied integers may be prefixed with 0 to force each term to have the same width.  When either x or y begins with a zero, the shell attempts to force all generated terms to contain the same
+773-       number of digits, zero-padding where necessary.  When characters are supplied, the expression expands to each character lexicographically between x and y, inclusive, using the default C locale.  Note that both x and  y  must
+774-       be of the same type.  When the increment is supplied, it is used as the difference between each term.  The default increment is 1 or -1 as appropriate.
+--
+2059:              Perform filename completion and insert the list of possible completions enclosed within braces so the list is available to the shell (see Brace Expansion above).
+```
 
+---
 ### 7 С учётом ответа на предыдущий вопрос, как создать однократным вызовом ```touch``` 100000 файлов? Получится ли аналогичным образом создать 300000? Если нет, то почему?
-
+---
+```touch file{1..100000}```
+Верхний предел количества аргумента в команде ```getconf ARG_MAX``` - 2097152
+---
 ### 8 В man bash поищите по ```/\[\[```. Что делает конструкция ```[[ -d /tmp ]]```
+---
 
+---
 ### 9 Сделайте так, чтобы в выводе команды ```type -a bash``` первым стояла запись с нестандартным путем, например bash is ... Используйте знания о просмотре существующих и создании новых переменных окружения, обратите внимание на переменную окружения PATH
 ```
 bash is /tmp/new_path_directory/bash
