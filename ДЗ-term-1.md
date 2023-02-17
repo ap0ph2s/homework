@@ -163,6 +163,7 @@ bash is /tmp/new_path_directory/bash
 bash is /usr/bin/bash
 bash is /bin/bash
 ```
+
 ---
 
 ### 10 Чем отличается планирование команд с помощью ```batch``` и ```at```?
