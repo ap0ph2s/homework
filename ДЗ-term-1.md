@@ -10,9 +10,10 @@
 
 * ```vagrant suspend``` выключит виртуальную машину с сохранением ее состояния (т.е., при следующем vagrant up будут запущены все процессы внутри, которые работали на момент вызова suspend), vagrant halt выключит виртуальную машину штатным образом.
 ---
-```sudo apt update```
-```sudo apt install virtualbox```
-```sudo apt install /home/dashat/vagrant_2.3.4-1_amd64.deb```
+```sudo apt update```  
+```sudo apt install virtualbox```  
+```sudo apt install /home/dashat/vagrant_2.3.4-1_amd64.deb```  
+
 
 
 ---
