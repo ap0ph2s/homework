@@ -167,4 +167,5 @@ bash is /bin/bash
 ---
 
 ```vagrant halt```
+
 ---
