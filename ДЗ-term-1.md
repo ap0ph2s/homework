@@ -12,6 +12,7 @@
 ---
 ```sudo apt update```
 ```sudo apt install virtualbox```
+```sudo apt install /home/dashat/vagrant_2.3.4-1_amd64.deb```
 
 
 ---
