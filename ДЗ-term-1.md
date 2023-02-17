@@ -87,15 +87,22 @@ RAM: 1024Mb, CPU: 2, vHDD: 64Gb video: 4Мb
 * какой переменной можно задать длину журнала ```history```, и на какой строчке manual это описывается?
 * что делает директива ```ignoreboth``` в bash?
 ---
-*
+* HISTFILE и HISTFILESIZE
 ```
-655        HISTFILE
-656               The  name  of  the  file  in which command history is saved (see HISTORY below).  The default value is ~/.bash_history.  If unset, the command history is not saved when a
-657               shell exits.
-658        HISTFILESIZE
-659               The maximum number of lines contained in the history file.  When this variable is assigned a value, the history file is truncated, if necessary, to contain no  more  t    659 han
+    600        HISTFILESIZE
+    601               The maximum number of lines contained in the history file.  When this variable is assigned a value, the history file is truncated, if necessary, to contain no more than that number of lines by removing the oldest  e
+    601 n‐
+    602               tries.   The  history  file is also truncated to this size after writing it when a shell exits.  If the value is 0, the history file is truncated to zero size.  Non-numeric values and numeric values less than zero i
+    602 n‐
+    603               hibit truncation.  The shell sets the default value to the value of HISTSIZE after reading any startup files.
+
+    609        HISTSIZE
+    610               The  number of commands to remember in the command history (see HISTORY below).  If the value is 0, commands are not saved in the history list.  Numeric values less than zero result in every command being saved on t
+    610 he
+    611               history list (there is no limit).  The shell sets the default value to 500 after reading any startup files.
+
 ```
-*
+* Значение ```ignoreboth``` является сокращением для ```ignorespace``` (строки, начинающиеся с символа пробела, не сохраняются в истории) и ```ignoredups``` (строки, совпадающие с предыдущей записью истории, не сохраняются)
 ```
  HISTCONTROL
               A colon-separated list of values controlling how commands are saved on the history list.  If the list of values includes ignorespace, lines which begin with a space char acter  are not saved in the history list.  A value of ignoredups causes lines matching the previous history entry to not be saved.  A value of ignoreboth is shorthand for ignorespace and ignoredups.  A value of erasedups causes all previous lines matching the current line to be removed from the history list before that line is saved. Any value  not  in  the  above list is ignored.  If HISTCONTROL is unset, or does not include a valid value, all lines read by the shell parser are saved on the history list, subject to the value of HISTIGNORE.  The second and subsequent lines of a multi-line compound command are not tested, and are added to the history regardless of the value of HISTCONTROL.
