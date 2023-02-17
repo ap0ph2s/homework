@@ -55,15 +55,27 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Mounting shared folders...
     default: /vagrant => /etc/vagrant/
 ```
-
-
-
 ---
 ### 2 Ознакомьтесь с графическим интерфейсом VirtualBox, посмотрите как выглядит виртуальная машина, которую создал для вас Vagrant, какие аппаратные ресурсы ей выделены. Какие ресурсы выделены по-умолчанию?
 ---
+RAM: 1024Mb, CPU: 2, vHDD: 64Gb video: 4Мb
 ---
 ### 3 Ознакомьтесь с возможностями конфигурации VirtualBox через Vagrantfile: документация. Как добавить оперативной памяти или ресурсов процессора виртуальной машине?
-
+---
+```vagrant halt```
+```
+==> default: Attempting graceful shutdown of VM...
+```
+```sudo nano Vagrantfile```  
+```
+ Vagrant.configure("2") do |config|
+ 	config.vm.box = "bento/ubuntu-20.04"
+	v.memory = 1025
+	v.cpus = 3
+ end
+```
+```vagrant up```
+---
 ### 4 Команда ```vagrant ssh``` из директории, в которой содержится Vagrantfile, позволит вам оказаться внутри виртуальной машины без каких-либо дополнительных настроек. Попрактикуйтесь в выполнении обсуждаемых команд в терминале Ubuntu.
 
 ### 5 Ознакомьтесь с разделами ```man bash```, почитайте о настройках самого bash:
