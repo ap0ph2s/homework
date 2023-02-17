@@ -157,7 +157,7 @@ bash is /bin/bash
 ```mkdir /tmp/new_path_directory/```  
 ```cd /tmp/new_path_directory/```  
 ```cp /bin/bash /tmp/new_path_directory/```  
-```export PATH="/tmp/new_path_directory:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"```  
+```export PATH="/tmp/new_path_directory:$PATH"```  
 ```type -a bash```  
 ```
 bash is /tmp/new_path_directory/bash
