@@ -42,7 +42,7 @@ two
 three
 ```
 
-```wc -l < input > output```
+```wc -l < input > output```  
 ```cat output```
 ```
 3
