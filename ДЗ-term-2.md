@@ -1,3 +1,6 @@
+
+<font color=gray size=72>color=gray</font>
+
 ### 1 Какого типа команда ```cd```? Попробуйте объяснить, почему она именно такого типа: опишите ход своих мыслей, если считаете, что она могла бы быть другого типа.
 ---
 Встроенная в оболочку команда ```type -t cd```
@@ -81,7 +84,7 @@ cat: file2: No such file or directory
 ```
 testn;fnf
 test
-cat: file2: <font color="red">No</font> such file or directory
+cat: file2: <font color=#A52A2A>No</font> such file or directory
 ```
 
 ---
