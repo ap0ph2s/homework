@@ -65,33 +65,25 @@ three
 Напоминаем: по умолчанию через pipe передается только stdout команды слева от ```|``` на stdin команды справа. Это можно сделать, поменяв стандартные потоки местами через промежуточный новый дескриптор, который вы научились создавать в предыдущем вопросе.
 
 ---
-Изначально
+|Изначально|``` 5>&1```|```1>&2```|```2>&5```|
+|:-|:-|:-|:-|
+|0 --> /dev/tty0 <br /> 1 --> /dev/tty1 <br /> 2 --> /dev/tty2|0 --> /dev/tty0 <br /> 1 --> /dev/tty1 <br /> 2 --> /dev/tty2 <br /> 5 --> /dev/tty1|0 --> /dev/tty0 <br /> 1 --> /dev/tty2 <br /> 2 --> /dev/tty2 <br /> 5 --> /dev/tty1|0 --> /dev/tty0 <br /> 1 --> /dev/tty2 <br /> 2 --> /dev/tty1 <br /> 5 --> /dev/tty1|  
+```cat file1```
 ```
-0 --> /dev/tty0
-1 --> /dev/tty1
-2 --> /dev/tty2
+testn;fnf
+test
 ```
-``` 5>&1```
+```cat file2```
 ```
-0 --> /dev/tty0
-1 --> /dev/tty1
-2 --> /dev/tty2
-5 --> /dev/tty1
+cat: file2: No such file or directory
 ```
-```1>&2```
+```cat file1 file2 5>&1 1>&2 2>&5 | grep No```
 ```
-0 --> /dev/tty0
-1 --> /dev/tty2
-2 --> /dev/tty2
-5 --> /dev/tty1
+testn;fnf
+test
+cat: file2: <font color="red">No</font> such file or directory
 ```
-```2>&5```
-```
-0 --> /dev/tty0
-1 --> /dev/tty2
-2 --> /dev/tty1
-5 --> /dev/tty1
-```
+
 ---
 
 ### 9 Что выведет команда ```cat /proc/$$/environ```? Как еще можно получить аналогичный по содержанию вывод?
