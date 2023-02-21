@@ -95,6 +95,20 @@ cat: file2: No such file or directory
 
 ### 10 Используя ```man```, опишите что доступно по адресам ```/proc/<PID>/cmdline```, ```/proc/<PID>/exe```.
 ---
+```
+       /proc/[pid]/cmdline
+              This read-only file holds the complete command line for the process, unless the process is a zombie.  In the latter case, there is nothing in this file: that is, a read on this file will return 0 characters.  The com‐
+              mand-line arguments appear in this file as a set of strings separated by null bytes ('\0'), with a further null byte after the last string.
+
+              If, after an execve(2), the process modifies its argv strings, those changes will show up here.  This is not the same thing as modifying the argv array.
+
+              Furthermore, a process may change the memory location that this file refers via prctl(2) operations such as PR_SET_MM_ARG_START.
+
+              Think of this file as the command line that the process wants you to see.
+```
+**cmdline** - содержит команду с помощью которой был запущен процесс, а также переданные ей параметры  
+**exe** - ссылка на исполняемый файл
+
 ---
 
 ### 11 Узнайте, какую наиболее старшую версию набора инструкций SSE поддерживает ваш процессор с помощью ```/proc/cpuinfo```.
