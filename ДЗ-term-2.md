@@ -1,6 +1,3 @@
-
-<font color=gray size=72>color=gray</font>
-
 ### 1 Какого типа команда ```cd```? Попробуйте объяснить, почему она именно такого типа: опишите ход своих мыслей, если считаете, что она могла бы быть другого типа.
 ---
 Встроенная в оболочку команда ```type -t cd```
@@ -84,13 +81,16 @@ cat: file2: No such file or directory
 ```
 testn;fnf
 test
-cat: file2: <font color=#A52A2A>No</font> such file or directory
+cat: file2: No such file or directory
 ```
 
 ---
 
 ### 9 Что выведет команда ```cat /proc/$$/environ```? Как еще можно получить аналогичный по содержанию вывод?
 ---
+```cat /proc/$$/environ``` выводит все переменные окружения.
+Похожий по сути вывод имеет ```env```
+
 ---
 
 ### 10 Используя ```man```, опишите что доступно по адресам ```/proc/<PID>/cmdline```, ```/proc/<PID>/exe```.
