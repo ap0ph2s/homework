@@ -158,14 +158,14 @@ not a tty
 
 ### 13 Бывает, что есть необходимость переместить запущенный процесс из одной сессии в другую. Попробуйте сделать это, воспользовавшись ```reptyr```. Например, так можно перенести в ```screen``` процесс, который вы запустили по ошибке в обычной SSH-сессии.
 ---
-```sudo apt-get install reptyr```
+```sudo apt-get install reptyr```  
 ```sudo nano /etc/sysctl.d/10-ptrace.conf```
 ```
 kernel.yama.ptrace_scope = 0
 ```
 ``` top &```
 ```
-[1] 1260
+[1] 1252
 ```
 ```jobs -l```
 ```
@@ -177,6 +177,12 @@ kernel.yama.ptrace_scope = 0
    1252 pts/1    00:00:00 top
    1253 pts/1    00:00:00 ps
 ```
+```disown htop```
+```
+-bash: warning: deleting stopped job 1 with process group 1260
+```
+  
+```reptyr 1252```
 
 
 ---
