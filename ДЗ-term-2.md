@@ -56,7 +56,7 @@ three
 ```
 /dev/pts/0
 ```
-В псевдотерминале SSH ```echo 'to TTY' > /dev/tty1```
+В псевдотерминале SSH ```echo 'to TTY' > /dev/tty1```  
 В консоли ВМ
 ```
 to TTY
