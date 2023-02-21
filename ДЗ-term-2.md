@@ -52,6 +52,15 @@ three
 
 ### 6 Получится ли, находясь в графическом режиме, вывести данные из PTY в какой-либо из эмуляторов TTY? Сможете ли вы наблюдать выводимые данные?
 ---
+В консоли ВМ (эмулятор TTY) ```tty```
+```
+/dev/pts/0
+```
+В псевдотерминале SSH ```echo 'to TTY' > /dev/tty1```
+В консоли ВМ
+```
+to TTY
+```
 ---
 
 ### 7 Выполните команду ```bash 5>&1```. К чему она приведет? Что будет, если вы выполните ```echo netology > /proc/$$/fd/5```? Почему так происходит?
@@ -67,7 +76,8 @@ three
 ---
 |Изначально|``` 5>&1```|```1>&2```|```2>&5```|
 |:-|:-|:-|:-|
-|0 --> /dev/tty0 <br /> 1 --> /dev/tty1 <br /> 2 --> /dev/tty2|0 --> /dev/tty0 <br /> 1 --> /dev/tty1 <br /> 2 --> /dev/tty2 <br /> 5 --> /dev/tty1|0 --> /dev/tty0 <br /> 1 --> /dev/tty2 <br /> 2 --> /dev/tty2 <br /> 5 --> /dev/tty1|0 --> /dev/tty0 <br /> 1 --> /dev/tty2 <br /> 2 --> /dev/tty1 <br /> 5 --> /dev/tty1|  
+|0 --> /dev/tty0 <br /> 1 --> /dev/tty1 <br /> 2 --> /dev/tty2|0 --> /dev/tty0 <br /> 1 --> /dev/tty1 <br /> 2 --> /dev/tty2 <br /> 5 --> /dev/tty1|0 --> /dev/tty0 <br /> 1 --> /dev/tty2 <br /> 2 --> /dev/tty2 <br /> 5 --> /dev/tty1|0 --> /dev/tty0 <br /> 1 --> /dev/tty2 <br /> 2 --> /dev/tty1 <br /> 5 --> /dev/tty1  
+
 ```cat file1```
 ```
 testn;fnf
