@@ -69,14 +69,44 @@ Modified file(s): ~/git/test:   1
 
 ### Ваш скрипт:
 ```python
-???
+#!/usr/bin/env python3
+
+import os
+
+path = "/home/tartyshev/git/test"
+path1 = input ("Enter directory (default "+ path + "): ")
+if os.path.isdir(path1) == True:
+    path = path1
+print ("Current directory is \"" + path +"\"" )
+bash_command = [f"cd {path}", "git status"]
+result_os = os.popen(' && '.join(bash_command)).read()
+for result in result_os.split('\n'):
+    if result.find('modified') != -1:
+        prepare_result = result.replace('\tmodified:   ', '')
+        print("Modified file(s): " + path + ":\t" + prepare_result)
+
 ```
 
 ### Вывод скрипта при запуске при тестировании:
-```
-???
-```
 
+`$ python3 test2.py`  
+```
+Enter directory (default /home/tartyshev/git/test): sdfsd
+Current directory is "/home/tartyshev/git/test"
+Modified file(s): /home/tartyshev/git/test:     1
+```
+`$ python3 test2.py`  
+```
+Enter directory (default /home/tartyshev/git/test): /home
+Current directory is "/home"
+fatal: not a git repository (or any of the parent directories): .git
+```
+`$ python3 test2.py`
+```
+Enter directory (default /home/tartyshev/git/test): /home/tartyshev/git/test2
+Current directory is "/home/tartyshev/git/test2"
+Modified file(s): /home/tartyshev/git/test2:    2 (modified content)
+```
 ------
 
 ## Задание 4
