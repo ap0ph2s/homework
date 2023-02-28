@@ -81,7 +81,7 @@ print ("Current directory is \"" + path +"\"" )
 bash_command = [f"cd {path}", "git status"]
 result_os = os.popen(' && '.join(bash_command)).read()
 for result in result_os.split('\n'):
-    if result.find('modified') != -1:
+    if result.find('modified:') != -1:
         prepare_result = result.replace('\tmodified:   ', '')
         print("Modified file(s): " + path + ":\t" + prepare_result)
 
@@ -124,10 +124,57 @@ Modified file(s): /home/tartyshev/git/test2:    2 (modified content)
 
 ### Ваш скрипт:
 ```python
-???
+
+#!/usr/bin/env python3
+
+import socket
+import time
+
+serv_o = {'drive.google.com': 'ip1', 'mail.google.com': 'ip2', 'google.com': 'ip3'}
+
+while True:
+    for n in serv_o.keys():
+        ip = socket.gethostbyname (n)
+        if ip != serv_o[n]:
+            print ('[ERROR] <'+n+'> IP mismatch: <'+serv_o[n]+'> <'+ip+'>')
+        serv_o[n] = ip
+    time.sleep(10)
+    print (serv_o)
+
 ```
 
 ### Вывод скрипта при запуске при тестировании:
+
+`$ python3 test3.py`
 ```
-???
+[ERROR] <drive.google.com> IP mismatch: <ip1> <64.233.165.194>
+[ERROR] <mail.google.com> IP mismatch: <ip2> <142.250.150.18>
+[ERROR] <google.com> IP mismatch: <ip3> <142.251.1.138>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.18', 'google.com': '142.251.1.138'}
+[ERROR] <google.com> IP mismatch: <142.251.1.138> <142.251.1.101>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.18', 'google.com': '142.251.1.101'}
+[ERROR] <google.com> IP mismatch: <142.251.1.101> <142.251.1.138>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.18', 'google.com': '142.251.1.138'}
+[ERROR] <mail.google.com> IP mismatch: <142.250.150.18> <142.250.150.19>
+[ERROR] <google.com> IP mismatch: <142.251.1.138> <142.251.1.101>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.19', 'google.com': '142.251.1.101'}
+[ERROR] <mail.google.com> IP mismatch: <142.250.150.19> <142.250.150.17>
+[ERROR] <google.com> IP mismatch: <142.251.1.101> <142.251.1.139>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.17', 'google.com': '142.251.1.139'}
+[ERROR] <mail.google.com> IP mismatch: <142.250.150.17> <142.250.150.83>
+[ERROR] <google.com> IP mismatch: <142.251.1.139> <142.251.1.101>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.83', 'google.com': '142.251.1.101'}
+[ERROR] <mail.google.com> IP mismatch: <142.250.150.83> <142.250.150.18>
+[ERROR] <google.com> IP mismatch: <142.251.1.101> <142.251.1.100>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.18', 'google.com': '142.251.1.100'}
+[ERROR] <mail.google.com> IP mismatch: <142.250.150.18> <142.250.150.17>
+[ERROR] <google.com> IP mismatch: <142.251.1.100> <142.251.1.139>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.17', 'google.com': '142.251.1.139'}
+[ERROR] <google.com> IP mismatch: <142.251.1.139> <142.251.1.101>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.17', 'google.com': '142.251.1.101'}
+[ERROR] <google.com> IP mismatch: <142.251.1.101> <142.251.1.100>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.17', 'google.com': '142.251.1.100'}
+[ERROR] <mail.google.com> IP mismatch: <142.250.150.17> <142.250.150.19>
+[ERROR] <google.com> IP mismatch: <142.251.1.100> <142.251.1.113>
+{'drive.google.com': '64.233.165.194', 'mail.google.com': '142.250.150.19', 'google.com': '142.251.1.113'}
 ```
