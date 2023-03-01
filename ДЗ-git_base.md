@@ -124,7 +124,7 @@ origin-https	https://github.com/andrey-borue/devops-netology.git (push)
 1. Измените какой-нибудь файл, и он сразу появится на вкладке `Local Changes`, отсюда можно выполнить коммит, нажав на кнопку внизу этого диалога. 
 1. Элементы управления для работы с Git будут выглядеть примерно так:
 
-   ![Работа с гитом](img/ide-git-01.jpg)
+   ![Работа с гитом](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/02-git-02-base/img/ide-git-01.jpg)
    
 1. Попробуйте выполнить пару коммитов, используя IDE. 
 
