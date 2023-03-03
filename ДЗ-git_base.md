@@ -25,13 +25,24 @@
 1. Перейдите на страницу созданного вами репозитория, URL будет примерно такой:
 https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагаемые варианты для начала работы в репозитории в секции
 `Command line instructions`. 
-1. Запомните вывод команды `git remote -v`.
-1. Из-за того, что это будет наш дополнительный репозиторий, ни один вариант из перечисленных в инструкции (на странице 
+![image](https://user-images.githubusercontent.com/45497624/222344608-f52515ae-1cfa-4b46-af1e-862201267101.png)
+
+1. Запомните вывод команды `git remote -v`.  
+```
+origin  https://github.com/ap0ph2s/homework (fetch)
+origin  https://github.com/ap0ph2s/homework (push)
+```
+7. Из-за того, что это будет наш дополнительный репозиторий, ни один вариант из перечисленных в инструкции (на странице 
 вновь созданного репозитория) нам не подходит. Поэтому добавляем этот репозиторий, как дополнительный `remote`, к созданному
-репозиторию в рамках предыдущего домашнего задания:
-`git remote add gitlab https://gitlab.com/YOUR_LOGIN/devops-netology.git`.
+репозиторию в рамках предыдущего домашнего задания: `git remote add gitlab https://gitlab.com/YOUR_LOGIN/devops-netology.git`.
 1. Отправьте изменения в новый удалённый репозиторий `git push -u gitlab main`.
 1. Обратите внимание, как изменился результат работы команды `git remote -v`.
+```
+gitlab  https://gitlab.com/ap0ph2s/devops_netology.git (fetch)
+gitlab  https://gitlab.com/ap0ph2s/devops_netology.git (push)
+origin  https://github.com/ap0ph2s/devops_netology.git (fetch)
+origin  https://github.com/ap0ph2s/devops_netology.git (push)
+```
 
 #### Как изменить видимость репозитория в  GitLab — сделать его публичным 
 
@@ -96,11 +107,72 @@ origin-https	https://github.com/andrey-borue/devops-netology.git (push)
 исправить её и выложить исправленный код в продакшн. Мы никуда не будем выкладывать код, но пометим некоторые коммиты тегами и создадим от них ветки. 
 
 1. Создайте легковестный тег `v0.0` на HEAD-коммите и запуште его во все три добавленных на предыдущем этапе `upstream`.
-1. Аналогично создайте аннотированный тег `v0.1`.
-1. Перейдите на страницу просмотра тегов в GitHab (и в других репозиториях) и посмотрите, чем отличаются созданные теги. 
+`git lo`
+```
+2dd5f22 (HEAD -> main, origin/main, origin/HEAD, gitlab/main) Moved and deleted
+2fb8c0d Prepare to delete and move
+cc58cf3 Added gitignore
+57301c1 First commit
+eefe05b Initial commit
+```
+`git tag v0.0`  
+`git lo`
+```
+2dd5f22 (HEAD -> main, tag: v0.0, origin/main, origin/HEAD, gitlab/main) Moved and deleted
+2fb8c0d Prepare to delete and move
+cc58cf3 Added gitignore
+57301c1 First commit
+eefe05b Initial commit
+```
+`git push gitlab --tags`
+```
+Username for 'https://gitlab.com': ap0ph2s
+Password for 'https://ap0ph2s@gitlab.com':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://gitlab.com/ap0ph2s/devops_netology.git
+ * [new tag]         v0.0 -> v0.0
+```
+
+2. Аналогично создайте аннотированный тег `v0.1`.
+`git tag -a v0.1 -m "test a.tag"`  
+`git show v0.1`
+```git
+tag v0.1
+Tagger: Tartyshev Alexander <ap0ph1s@yandex.ru>
+Date:   Fri Mar 3 17:53:04 2023 +0300
+
+test a.tag
+
+commit 2dd5f22a6bf7795885f87d2633cae944c5f14638 (HEAD -> main, tag: v0.1, tag: v0.0, origin/main, origin/HEAD, gitlab/main)
+Author: Tartyshev Alexander <ap0ph1s@yandex.ru>
+Date:   Wed Mar 1 17:49:42 2023 +0300
+
+    Moved and deleted
+
+diff --git a/will_be_moved.txt b/has_been_moved.txt
+similarity index 100%
+rename from will_be_moved.txt
+rename to has_been_moved.txt
+diff --git a/will_be_deleted.txt b/will_be_deleted.txt
+deleted file mode 100644
+index ee10159..0000000
+--- a/will_be_deleted.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-will_be_deleted
+```
+`git push gitlab v0.1`  
+`git push origin --tags`
+
+3. Перейдите на страницу просмотра тегов в GitHab (и в других репозиториях) и посмотрите, чем отличаются созданные теги. 
     * в GitHub — https://github.com/YOUR_ACCOUNT/devops-netology/releases;
     * в GitLab — https://gitlab.com/YOUR_ACCOUNT/devops-netology/-/tags;
     * в Bitbucket — список тегов расположен в выпадающем меню веток на отдельной вкладке. 
+![image](https://user-images.githubusercontent.com/45497624/222754461-fa7c1f17-fcb6-48e0-af8a-bc7c84d1bb92.png)
+![image](https://user-images.githubusercontent.com/45497624/222754678-81dfb8b6-236f-4475-b35a-ca01abad1c25.png)
+
+![image](https://user-images.githubusercontent.com/45497624/222755032-f09b7b58-1759-4d14-ba67-4f645388ac76.png)
+![image](https://user-images.githubusercontent.com/45497624/222755162-03392a0a-d002-400b-bef1-b96e1c6f442c.png)
 
 ## Задание 3. Ветки 
 
