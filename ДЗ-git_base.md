@@ -216,14 +216,31 @@ To https://github.com/ap0ph2s/devops_netology.git
 Branch 'fix' set up to track remote branch 'fix' from 'origin'.
 ```
 6. Посмотрите, как визуально выглядит ваша схема коммитов: https://github.com/YOUR_ACCOUNT/devops-netology/network. 
+![image](https://user-images.githubusercontent.com/45497624/222988864-f33d8bf5-3f0a-43fb-9681-5e237e15613a.png)
 
 1. Теперь измените содержание файла `README.md`, добавив новую строчку.
+`echo 'add new line' >> README.md`
 1. Отправьте изменения в репозиторий и посмотрите, как изменится схема на странице https://github.com/YOUR_ACCOUNT/devops-netology/network 
-и как изменится вывод команды `git log`.
-
-
-
-
+и как изменится вывод команды `git log`.  
+`git commit -a -m "add fix branch"`
+```
+[fix c9d40b3] add fix branch
+ 1 file changed, 1 insertion(+)
+```
+`git push`
+`git push gitlab`
+![image](https://user-images.githubusercontent.com/45497624/222989645-6cf59cfe-9101-46bb-8d9a-1d5af5758a00.png)
+![image](https://user-images.githubusercontent.com/45497624/222989870-5c6d8ad6-772f-4c15-b62d-62261c8bcf6c.png)
+`git log --oneline --decorate --graph --all`
+```
+* c9d40b3 (HEAD -> fix, origin/fix, gitlab/fix) add fix branch
+| * 2dd5f22 (tag: v0.1, tag: v0.0, origin/main, origin/HEAD, gitlab/main, main) Moved and deleted
+|/
+* 2fb8c0d Prepare to delete and move
+* cc58cf3 Added gitignore
+* 57301c1 First commit
+* eefe05b Initial commit
+```
 
 ## Задание 4. Упрощаем себе жизнь
 
