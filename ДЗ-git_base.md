@@ -179,14 +179,51 @@ index ee10159..0000000
 Давайте посмотрим, как будет выглядеть история коммитов при создании веток. 
 
 1. Переключитесь обратно на ветку `main`, которая должна быть связана с веткой `main` репозитория на `github`.
-1. Посмотрите лог коммитов и найдите хеш коммита с названием `Prepare to delete and move`, который был создан в пределах предыдущего домашнего задания. 
-1. Выполните `git checkout` по хешу найденного коммита. 
-1. Создайте новую ветку `fix`, базируясь на этом коммите `git switch -c fix`.
-1. Отправьте новую ветку в репозиторий на GitHub `git push -u origin fix`.
-1. Посмотрите, как визуально выглядит ваша схема коммитов: https://github.com/YOUR_ACCOUNT/devops-netology/network. 
+1. Посмотрите лог коммитов и найдите хеш коммита с названием `Prepare to delete and move`, который был создан в пределах предыдущего домашнего задания.  
+`git log --oneline --decorate --graph --all`
+```
+* 2dd5f22 (HEAD -> main, tag: v0.1, tag: v0.0, origin/main, origin/HEAD, gitlab/main) Moved and deleted
+* 2fb8c0d Prepare to delete and move
+* cc58cf3 Added gitignore
+* 57301c1 First commit
+* eefe05b Initial commit
+```
+
+3. Выполните `git checkout` по хешу найденного коммита.  
+`git checkout 2fb8c0d`  
+`git log --oneline --decorate --graph --all`
+```
+* 2dd5f22 (tag: v0.1, tag: v0.0, origin/main, origin/HEAD, gitlab/main, main) Moved and deleted
+* 2fb8c0d (HEAD) Prepare to delete and move
+* cc58cf3 Added gitignore
+* 57301c1 First commit
+* eefe05b Initial commit
+```
+
+4. Создайте новую ветку `fix`, базируясь на этом коммите `git switch -c fix`.
+```
+Switched to a new branch 'fix'
+```
+5. Отправьте новую ветку в репозиторий на GitHub `git push -u origin fix`.
+```
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'fix' on GitHub by visiting:
+remote:      https://github.com/ap0ph2s/devops_netology/pull/new/fix
+remote:
+To https://github.com/ap0ph2s/devops_netology.git
+ * [new branch]      fix -> fix
+Branch 'fix' set up to track remote branch 'fix' from 'origin'.
+```
+6. Посмотрите, как визуально выглядит ваша схема коммитов: https://github.com/YOUR_ACCOUNT/devops-netology/network. 
+
 1. Теперь измените содержание файла `README.md`, добавив новую строчку.
 1. Отправьте изменения в репозиторий и посмотрите, как изменится схема на странице https://github.com/YOUR_ACCOUNT/devops-netology/network 
 и как изменится вывод команды `git log`.
+
+
+
+
 
 ## Задание 4. Упрощаем себе жизнь
 
