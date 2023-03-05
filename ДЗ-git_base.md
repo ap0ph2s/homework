@@ -227,10 +227,10 @@ Branch 'fix' set up to track remote branch 'fix' from 'origin'.
 [fix c9d40b3] add fix branch
  1 file changed, 1 insertion(+)
 ```
-`git push`
-`git push gitlab`
-![image](https://user-images.githubusercontent.com/45497624/222989645-6cf59cfe-9101-46bb-8d9a-1d5af5758a00.png)
-![image](https://user-images.githubusercontent.com/45497624/222989870-5c6d8ad6-772f-4c15-b62d-62261c8bcf6c.png)
+`git push`  
+`git push gitlab`  
+![image](https://user-images.githubusercontent.com/45497624/222989645-6cf59cfe-9101-46bb-8d9a-1d5af5758a00.png)  
+![image](https://user-images.githubusercontent.com/45497624/222989870-5c6d8ad6-772f-4c15-b62d-62261c8bcf6c.png)  
 `git log --oneline --decorate --graph --all`
 ```
 * c9d40b3 (HEAD -> fix, origin/fix, gitlab/fix) add fix branch
