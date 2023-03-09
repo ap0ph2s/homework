@@ -47,7 +47,49 @@ WantedBy=multi-user.target
 2. Изучите опции node_exporter и вывод `/metrics` по умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
 
 ----
-
+CPU
+```
+node_cpu_seconds_total{cpu="0",mode="idle"} 5001.36
+node_cpu_seconds_total{cpu="0",mode="iowait"} 11.6
+node_cpu_seconds_total{cpu="0",mode="system"} 10.86
+```
+mem
+```
+# TYPE node_memory_MemAvailable_bytes gauge
+node_memory_MemAvailable_bytes 6.54852096e+08
+# TYPE node_memory_MemFree_bytes gauge
+node_memory_MemFree_bytes 4.69254144e+08
+# TYPE node_memory_MemTotal_bytes gauge
+node_memory_MemTotal_bytes 1.323798528e+09
+# TYPE node_memory_SwapFree_bytes gauge
+node_memory_SwapFree_bytes 2.147479552e+09
+# TYPE node_memory_SwapTotal_bytes gauge
+node_memory_SwapTotal_bytes 2.147479552e+09
+```
+disk
+```
+# TYPE node_filesystem_avail_bytes gauge
+node_filesystem_avail_bytes{device="/dev/mapper/ubuntu--vg-ubuntu--lv",fstype="ext4",mountpoint="/"} 5.4363619328e+10
+# TYPE node_disk_read_bytes_total counter
+node_disk_read_bytes_total{device="sda"} 3.00301312e+08
+# TYPE node_disk_written_bytes_total counter
+node_disk_written_bytes_total{device="sda"} 2.3225344e+07
+# TYPE node_disk_io_now gauge
+node_disk_io_now{device="sda"} 0
+```
+net
+```
+# TYPE node_network_info gauge
+node_network_info{address="00:15:5d:14:19:0c",broadcast="ff:ff:ff:ff:ff:ff",device="eth0",duplex="full",ifalias="",operstate="up"} 1
+# TYPE node_network_receive_errs_total counter
+node_network_receive_errs_total{device="eth0"} 0
+# TYPE node_network_transmit_errs_total counter
+node_network_transmit_errs_total{device="eth0"} 0
+# TYPE node_network_receive_packets_total counter
+node_network_receive_packets_total{device="eth0"} 33884
+# TYPE node_network_transmit_packets_total counter
+node_network_transmit_packets_total{device="eth0"} 6174
+```
 ----
 
 3. Установите в свою виртуальную машину [Netdata](https://github.com/netdata/netdata). Воспользуйтесь [готовыми пакетами](https://packagecloud.io/netdata/netdata/install) для установки (`sudo apt install -y netdata`). 
