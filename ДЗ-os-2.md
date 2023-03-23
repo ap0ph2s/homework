@@ -141,7 +141,24 @@ node_network_transmit_packets_total{device="eth0"} 6174
 
 ----
 
-
+`unshare -f --pid --mount-proc sleep 1h &`
+```
+[1] 140912
+```
+`ps aux | grep sleep`
+```
+root      140912  0.0  0.1   5768   996 pts/1    S    17:45   0:00 unshare -f --pid --mount-proc sleep 1h
+root      140913  0.0  0.1   5768  1012 pts/1    S    17:45   0:00 sleep 1h
+root      140915  0.0  0.2   6476  2348 pts/1    S+   17:45   0:00 grep --color=auto sleep
+```
+`nsenter --target 140913 --pid --mount`  
+`ps auxf`
+```
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.6   8656  5360 pts/1    S    17:46   0:00 -bash
+root          13  0.0  0.1  10040  1560 pts/1    R+   17:48   0:00  \_ ps auxf
+root           1  0.0  0.1   5768  1012 pts/1    S    17:45   0:00 sleep 1h
+```
 ----
 
 7. Найдите информацию о том, что такое `:(){ :|:& };:`. Запустите эту команду в своей виртуальной машине Vagrant с Ubuntu 20.04 (**это важно, поведение в других ОС не проверялось**). Некоторое время всё будет плохо, после чего (спустя минуты) — ОС должна стабилизироваться. Вызов `dmesg` расскажет, какой механизм помог автоматической стабилизации.  
